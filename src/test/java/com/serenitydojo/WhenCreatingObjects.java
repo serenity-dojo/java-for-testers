@@ -10,9 +10,18 @@ public class WhenCreatingObjects {
 
         Cat felix = new Cat("Felix","Tuna", 4);
 
-        assert felix.getName().equals("Spot");
-        Assert.assertEquals(felix.getAge(), 5);
+        Assert.assertEquals(felix.getName(), "Felix");
         Assert.assertEquals(felix.getFavoriteFood(), "Tuna");
-        Assert.assertEquals(felix.getAge(), 5);
+        Assert.assertEquals(felix.getAge(), 4);
+    }
+
+    @Test
+    public void creating_a_dog() {
+
+//        Dog dog = new Dog("Fido","Bone", 5);
+//        Assert.assertEquals(fido.getName(), "Fido");
+//        Assert.assertEquals(fido.getFavoriteToy, "Bone");
+//        Assert.assertEquals(fido.getAge(), 5);
+
     }
 }
