@@ -14,6 +14,8 @@ public class WhenCreatingObjects {
         Assert.assertEquals(felix.getName(), "Felix");
         Assert.assertEquals(felix.getFavoriteFood(), "Tuna");
         Assert.assertEquals(felix.getAge(), 4);
+
+        Pet hampter = new Pet("Rusty");
     }
 
     @Test

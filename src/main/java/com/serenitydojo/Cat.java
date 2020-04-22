@@ -3,12 +3,8 @@ package com.serenitydojo;
 /**
  * A feline creature.
  */
-public class Cat {
-    /**
-     * The name of the cat
-     * This is important
-     */
-    private String name;
+public class Cat extends Pet {
+
     private String favoriteFood;
     private int age;
 
@@ -20,19 +16,15 @@ public class Cat {
     }
 
     public Cat(String name, int age) {
-        this.name = name;
+        super(name);
         this.age = age;
         this.favoriteFood = usualFood();
     }
 
     public Cat(String name, String favoriteFood, int age) {
-        this.name = name;
+        super(name);
         this.favoriteFood = favoriteFood;
         this.age = age;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public void setFavoriteFood(String favoriteFood) {
@@ -52,7 +44,7 @@ public class Cat {
     }
 
     public void feed(String food) {
-        System.out.println(name + " eats some " + food);
+        System.out.println(getName() + " eats some " + food);
     }
 
     public void groom() {
@@ -61,10 +53,10 @@ public class Cat {
     }
 
     private void cleanFur() {
-        System.out.println(name + " cleans his fur");
+        System.out.println(getName() + " cleans his fur");
     }
 
     private void lickPaws() {
-        System.out.println(name + " licks his paws");
+        System.out.println(getName() + " licks his paws");
     }
 }
