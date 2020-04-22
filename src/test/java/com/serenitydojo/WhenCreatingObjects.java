@@ -2,6 +2,7 @@ package com.serenitydojo;
 
 import org.junit.Assert;
 import org.junit.Test;
+import static com.serenitydojo.Cat.usualFood;
 
 public class WhenCreatingObjects {
 
@@ -23,5 +24,13 @@ public class WhenCreatingObjects {
 //        Assert.assertEquals(fido.getFavoriteToy(), "Bone");
 //        Assert.assertEquals(fido.getAge(), 5);
 
+    }
+
+    @Test
+    public void cat_makes_noise() {
+        Cat felix = new Cat("Felix", 4);
+        Cat spot = new Cat("Spot","Salmon", 3);
+
+        System.out.println("Cats like " + usualFood());
     }
 }
