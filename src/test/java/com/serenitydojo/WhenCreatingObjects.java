@@ -65,13 +65,14 @@ public class WhenCreatingObjects {
 
     @Test
     public void pets_can_play() {
+
         Pet felix = new Cat("Felix",4);
         Pet fido = new Dog("Fido", "bone", 5);
         Pet rusty = new Hampster("Rusty", "wheels", 1);
 
-//        assertEquals(felix.play(), "plays with string");
-//        assertEquals(fido.play(), "plays with bone");
-//        assertEquals(rusty.play(), "runs in wheel");
+        assertEquals(felix.play(), "plays with string");
+        assertEquals(fido.play(), "plays with bone");
+        assertEquals(rusty.play(), "runs in wheel");
 
     }
 

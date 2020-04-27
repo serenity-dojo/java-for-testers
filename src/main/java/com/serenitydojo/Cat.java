@@ -44,6 +44,11 @@ public class Cat extends Pet {
         return CAT_NOISE;
     }
 
+    @Override
+    public String play() {
+        return "plays with string";
+    }
+
     public void feed(String food) {
         System.out.println(getName() + " eats some " + food);
     }
