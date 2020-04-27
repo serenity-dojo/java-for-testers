@@ -10,6 +10,11 @@ public class Dog extends Pet {
         this.age = age;
     }
 
+    @Override
+    public String play() {
+        return "plays with bone";
+    }
+
     public String getFavoriteToy() {
         return favoriteToy;
     }
