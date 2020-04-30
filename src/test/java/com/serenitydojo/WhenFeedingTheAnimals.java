@@ -2,6 +2,7 @@ package com.serenitydojo;
 
 import com.serenitydojo.model.AnimalType;
 import com.serenitydojo.model.Feeder;
+import com.serenitydojo.model.FoodType;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -13,54 +14,54 @@ public class WhenFeedingTheAnimals {
     public void shouldFeedCatsTuna() {
         Feeder feeder = new Feeder();
 
-        String food = feeder.feeds(CAT, false);
+        FoodType food = feeder.feeds(CAT, false);
 
-        Assert.assertEquals("Tuna", food);
+        Assert.assertEquals(FoodType.TUNA, food);
     }
 
     @Test
     public void shouldFeedHamstersCabbage() {
         Feeder feeder = new Feeder();
 
-        String food = feeder.feeds(HAMSTER, false);
+        FoodType food = feeder.feeds(HAMSTER, false);
 
-        Assert.assertEquals("Cabbage", food);
+        Assert.assertEquals(FoodType.CABBAGE, food);
     }
 
     @Test
     public void shouldFeedDogsDogFood() {
         Feeder feeder = new Feeder();
 
-        String food = feeder.feeds(DOG, false);
+        FoodType food = feeder.feeds(DOG, false);
 
-        Assert.assertEquals("Dog Food", food);
+        Assert.assertEquals(FoodType.DOG_FOOD, food);
     }
 
     @Test
     public void shouldFeedPremiumCatsPremiumFood() {
         Feeder feeder = new Feeder();
 
-        String food = feeder.feeds(CAT, true);
+        FoodType food = feeder.feeds(CAT, true);
 
-        Assert.assertEquals("Salmon", food);
+        Assert.assertEquals(FoodType.SALMON, food);
     }
 
     @Test
     public void shouldFeedPremiumDogsDeluxeDogFood() {
         Feeder feeder = new Feeder();
 
-        String food = feeder.feeds(DOG, true);
+        FoodType food = feeder.feeds(DOG, true);
 
-        Assert.assertEquals("Deluxe Dog Food", food);
+        Assert.assertEquals(FoodType.DELUXE_DOG_FOOD, food);
     }
 
     @Test
     public void shouldFeedPremiumHamstersLettuce() {
         Feeder feeder = new Feeder();
 
-        String food = feeder.feeds(HAMSTER, true);
+        FoodType food = feeder.feeds(HAMSTER, true);
 
-        Assert.assertEquals("Lettuce", food);
+        Assert.assertEquals(FoodType.LETTUCE, food);
     }
 
 }
