@@ -47,4 +47,6 @@ public class WhenCalculatingMonthlyInterest {
         // THEN
         assertThat(totalEarnedInterest).isEqualTo(2.0);
     }
+
+
 }
