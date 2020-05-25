@@ -16,10 +16,17 @@ public class WhenCalculatingTotalPrice {
         cart.add(3, item2);
         cart.add(1, item3);
         cart.add(1, item4);
-        cart.calculateTotal();
-        cart.addSalesTax();
         cart.addBags(3);
         double totalPrice = cart.getTotal();
-        Assert.assertEquals(totalPrice, 100,0.0);
+        Assert.assertEquals(totalPrice, 38.43,0.0);
+    }
+
+    /**
+     * TODO: Write another test to check what happens when you apply a discount using the "applyDiscount()" method
+     *
+     */
+    @Test
+    public void shouldReduceThePriceWhenADiscountIsApplied() {
+
     }
 }
