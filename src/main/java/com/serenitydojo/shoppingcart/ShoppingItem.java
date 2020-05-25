@@ -8,7 +8,6 @@ public class ShoppingItem {
     private final String brand;
 
     public ShoppingItem(String name, String units, double price, String serialNumber, String brand) {
-
         this.name = name;
         this.units = units;
         this.price = price;

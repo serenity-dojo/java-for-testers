@@ -13,13 +13,13 @@ public class WhenCalculatingTotalPrice {
         ShoppingItem item3 = new ShoppingItem("Apples", "bag", 6.99,"345457584524562","Farmers Pick");
         ShoppingItem item4 = new ShoppingItem("Oranges", "bag", 7.99,"986865754876587","Farmers Pick");
         cart.add(2, item1);
-        cart.add(3, item2);
-        cart.add(1, item3);
         cart.add(1, item4);
+        cart.add(1, item3);
+        cart.add(3, item2);
         cart.calculateTotal();
         cart.addSalesTax();
         cart.addBags(3);
         double totalPrice = cart.getTotal();
-        Assert.assertEquals(totalPrice, 100,0.0);
+        Assert.assertEquals(totalPrice, 38.43,0.0);
     }
 }
