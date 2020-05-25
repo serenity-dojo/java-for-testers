@@ -14,4 +14,24 @@ public class ShoppingItem {
         this.serialNumber = serialNumber;
         this.brand = brand;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getUnits() {
+        return units;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String getSerialNumber() {
+        return serialNumber;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
 }
