@@ -91,4 +91,17 @@ public class WhenWorkingWithLists {
         assertThat(nameSet).containsExactlyInAnyOrder("joe", "sally", "pete", "paul");
     }
 
+    @Test
+    public void iteratingOverAListUsingAForLoop() {
+        List<String> names = Arrays.asList("joe", "sally", "pete", "paul");
+
+        StringBuilder listOfNames = new StringBuilder();
+        for(String name : names) {
+            listOfNames.append(name).append(" ");
+        }
+        String concatenatedNames = listOfNames.toString().trim();
+
+        assertThat(concatenatedNames).isEqualTo("joe sally pete paul");
+    }
+
 }
