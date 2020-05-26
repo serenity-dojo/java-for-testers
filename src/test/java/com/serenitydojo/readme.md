@@ -1,1 +1,1 @@
-Unit tests go here
+In this tutorial we look at some more advanced Java Collection features.
