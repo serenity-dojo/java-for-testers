@@ -9,6 +9,11 @@ public class AShoppingCart extends ShoppingCart {
         return new AShoppingCartBuilder(this, quantity);
     }
 
+    public AShoppingCart andWithADiscountOf(double discount) {
+        applyDiscount(discount);
+        return this;
+    }
+
     public static class AShoppingCartBuilder {
         private int quantity;
         private String unit;
@@ -40,6 +45,11 @@ public class AShoppingCart extends ShoppingCart {
 
         public AShoppingCartBuilder bagOf(String product) {
             return bagsOf(product);
+        }
+
+        public ShoppingCart shoppingBags() {
+            shoppingCart.addBags(quantity);
+            return shoppingCart;
         }
     }
 }

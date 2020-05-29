@@ -25,7 +25,6 @@ public class WhenCalculatingTotalPrice {
         double totalPrice = totalPriceOf(
                                 AShoppingCart.with(2).bagsOf("Rice").eachCosting(4.99)
                                              .andWith(3).bottlesOf("Milk").eachCosting(3.99)
-                                             .andWith(1).eachCosting(10.00)
                                              .andWith(1).bagOf("Apple").eachCosting(6.99)
                                              .andWith(1).bagOf("Oranges").eachCosting(6.99)
         );
@@ -41,6 +40,14 @@ public class WhenCalculatingTotalPrice {
      */
     @Test
     public void shouldCharge50centsPerBag() {
+        double totalPrice = totalPriceOf(
+                AShoppingCart.with(2).bagsOf("Rice").eachCosting(4.99)
+                        .andWith(3).bottlesOf("Milk").eachCosting(3.99)
+                        .andWith(1).bagOf("Apple").eachCosting(6.99)
+                        .andWith(1).bagOf("Oranges").eachCosting(6.99)
+                        .andWith(3).shoppingBags()
+        );
+        assertThat(totalPrice).isEqualTo(37.43);
     }
 
     /**
@@ -48,6 +55,14 @@ public class WhenCalculatingTotalPrice {
      */
     @Test
     public void shouldReduceThePriceWhenADiscountIsApplied() {
+        double totalPrice = totalPriceOf(
+                AShoppingCart.with(2).bagsOf("Rice").eachCosting(4.99)
+                        .andWith(3).bottlesOf("Milk").eachCosting(3.99)
+                        .andWith(1).bagOf("Apple").eachCosting(6.99)
+                        .andWith(1).bagOf("Oranges").eachCosting(6.99)
+                        .andWithADiscountOf(10.00)
+        );
+        assertThat(totalPrice).isEqualTo(25.93);
 
     }
 }
