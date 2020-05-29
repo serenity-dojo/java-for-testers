@@ -15,12 +15,12 @@ public class ShoppingCart {
     }
 
     public void addBags(int numberOfBags) {
-        ShoppingItem bag = new ShoppingItem("Shopping Bag", "bag", 0.50,"324534563546356","Shop");
+        ShoppingItem bag = new ShoppingItem("Shopping Bag", "bag", 0.50,"324534563546356",0.0, "Shop");
         shoppingCartContents.add(new ItemInCart(bag, numberOfBags));
     }
 
     public void applyDiscount(double discount) {
-        ShoppingItem discountLineItem = new ShoppingItem("Discount", "1", -1 * discount,"","");
+        ShoppingItem discountLineItem = new ShoppingItem("Discount", "1", -1 * discount,"",0.0, "");
         shoppingCartContents.add(new ItemInCart(discountLineItem, 1));
     }
 

@@ -3,27 +3,48 @@ package com.serenitydojo.shoppingcart;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 public class WhenCalculatingTotalPrice {
 
+
+    /**
+     * TODO:
+     * Write a test that checks the following scenario:
+     *  - Add the following items to a shopping cart:
+     *         - 2 kg rice at 4.99 each
+     *         - 3 litres of milk at 3.99
+     *         - 1 bag of apples at 6.99
+     *         - 1 bag of oranges at 7.99
+     *  - Proceed to the checkout
+     *  - The total should be 36.93
+     *
+     */
     @Test
     public void shouldCalculatePriceWhenArticlesAreAddedToTheCart() {
-        ShoppingCart cart = new ShoppingCart();
-        ShoppingItem item1 = new ShoppingItem("Rice", "1 kg", 4.99,"1235357214735835","Rice R Us");
-        ShoppingItem item2 = new ShoppingItem("Milk", "1 lt", 3.99,"7879827234234232","Home Brand Dairy");
-        ShoppingItem item3 = new ShoppingItem("Apples", "bag", 6.99,"345457584524562","Farmers Pick");
-        ShoppingItem item4 = new ShoppingItem("Oranges", "bag", 7.99,"986865754876587","Farmers Pick");
-        cart.add(2, item1);
-        cart.add(3, item2);
-        cart.add(1, item3);
-        cart.add(1, item4);
-        cart.addBags(3);
-        double totalPrice = cart.getTotal();
-        Assert.assertEquals(totalPrice, 38.43,0.0);
+        double totalPrice = totalPriceOf(
+                                AShoppingCart.with(2).bagsOf("Rice").eachCosting(4.99)
+                                             .andWith(3).bottlesOf("Milk").eachCosting(3.99)
+                                             .andWith(1).eachCosting(10.00)
+                                             .andWith(1).bagOf("Apple").eachCosting(6.99)
+                                             .andWith(1).bagOf("Oranges").eachCosting(6.99)
+        );
+        assertThat(totalPrice).isEqualTo(35.93);
+    }
+
+    private double totalPriceOf(ShoppingCart cart) {
+        return cart.getTotal();
+    }
+
+    /**
+     * TODO: Write another test to check what happens when you add bags with the addBags() method
+     */
+    @Test
+    public void shouldCharge50centsPerBag() {
     }
 
     /**
      * TODO: Write another test to check what happens when you apply a discount using the "applyDiscount()" method
-     *
      */
     @Test
     public void shouldReduceThePriceWhenADiscountIsApplied() {
