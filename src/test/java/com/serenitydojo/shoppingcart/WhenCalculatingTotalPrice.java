@@ -25,7 +25,6 @@ public class WhenCalculatingTotalPrice {
         double totalPrice = totalPriceOf(
                                 AShoppingCart.with(2).bagsOf("Rice").eachCosting(4.99)
                                              .andWith(3).bottlesOf("Milk").eachCosting(3.99)
-                                             .andWith(1).eachCosting(10.00)
                                              .andWith(1).bagOf("Apple").eachCosting(6.99)
                                              .andWith(1).bagOf("Oranges").eachCosting(6.99)
         );
