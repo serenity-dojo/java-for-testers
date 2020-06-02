@@ -152,5 +152,4 @@ public class WhenWorkingWithStrings {
         assertThat(min).isEqualTo(10);
 
     }
-
 }
