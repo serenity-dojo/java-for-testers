@@ -1,6 +1,5 @@
 package com.serenitydojo.strings;
 
-import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -21,7 +20,7 @@ public class WhenWorkingWithStrings {
         var colorC = "blue";
 
         // TODO: turn these values into a comma separated list
-        var result = colorA + "," + colorB + "," + colorC;
+        var result = ""; // FIXME
 
         assertThat(result).isEqualTo("red,green,blue");
     }
@@ -43,20 +42,11 @@ public class WhenWorkingWithStrings {
     }
 
     private String reverse(String... values) {
-        StringBuilder reversedValue = new StringBuilder();
-        for(int i = values.length - 1; i >= 0; i--) {
-            reversedValue.append(values[i]);
-            reversedValue.append(" ");
-        }
-        return reversedValue.toString().trim();
+        return ""; // FIXME
     }
 
     private List<String> reverseList(String... values) {
-        List<String> reversed = new ArrayList<>();
-        for(int i = values.length - 1; i >= 0; i--) {
-            reversed.add(values[i]);
-        }
-        return reversed;
+        return Collections.emptyList(); // FIXME
     }
 
     /**
@@ -70,15 +60,7 @@ public class WhenWorkingWithStrings {
     }
 
     private String capitalise(String... words) {
-        StringBuffer result = new StringBuffer();
-        for(var word : words) {
-            var upperCaseFirstLetter = word.substring(0,1).toUpperCase();
-            var lowerCaseEnding = word.toLowerCase().substring(1);
-            var capitalisedWord = upperCaseFirstLetter + lowerCaseEnding;
-            result.append(capitalisedWord);
-            result.append(" ");
-        }
-        return result.toString().trim();
+        return ""; // FIXME
     }
 
     /**
@@ -88,10 +70,7 @@ public class WhenWorkingWithStrings {
     public void colourSwitch() {
         List<String> colouredShirts = List.of("red shirt", "light red shirt", "blue shirt", "green shirt");
 
-        List<String> updatedShirts = new ArrayList<>();
-        for(String shirt : colouredShirts) {
-            updatedShirts.add(shirt.replace("red", "orange"));
-        }
+        List<String> updatedShirts = new ArrayList<>(); // FIXME
 
         assertThat(updatedShirts).containsExactly("orange shirt", "light orange shirt", "blue shirt", "green shirt");
     }
@@ -103,13 +82,8 @@ public class WhenWorkingWithStrings {
     public void colourFilter() {
         List<String> terms = List.of("red", "Light Red", "Orange-red wash", "green","ruby red", "blue");
 
-        List<String> reds = new ArrayList<>();
+        List<String> reds = new ArrayList<>(); // FIXME
 
-        for(String color : terms) {
-            if (color.toLowerCase().contains("red")) {
-                reds.add(color);
-            }
-        }
         assertThat(reds).containsExactly("red", "Light Red", "Orange-red wash", "ruby red");
     }
 
@@ -122,7 +96,7 @@ public class WhenWorkingWithStrings {
 
         List<String> sortedTerms = new ArrayList<>(terms);
 
-        Collections.sort(sortedTerms);
+        // FIXME
 
         assertThat(sortedTerms).containsExactly("blue", "green", "orange", "red", "ruby red", "yellow");
 
@@ -134,7 +108,7 @@ public class WhenWorkingWithStrings {
 
         List<String> sortedTerms = new ArrayList<>(terms);
 
-        Collections.replaceAll(sortedTerms,"yellow","beige");
+        // FIXME
 
         assertThat(sortedTerms).containsExactly("red", "beige", "orange", "green","ruby red", "blue");
 
@@ -145,8 +119,9 @@ public class WhenWorkingWithStrings {
     public void findingMaximumAndMinimums() {
         List<Integer> numbers = List.of(10,20,30,40,50);
 
-        int max = Collections.max(numbers);
-        int min = Collections.min(numbers);
+        // FIXME
+        int max = 0;
+        int min = 0;
 
         assertThat(max).isEqualTo(50);
         assertThat(min).isEqualTo(10);
