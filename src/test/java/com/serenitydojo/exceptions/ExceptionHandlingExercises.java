@@ -27,7 +27,8 @@ public class ExceptionHandlingExercises {
 
     /**
      * Exercise 2 - Catching exceptions
-     *
+     * Update the fileContainsText() method in the FileLoader class so that it returns false if the file
+     * does not contain the excepted text, or if the file does not exist.
      */
     @Test
     public void catchingExceptions() {
@@ -43,6 +44,8 @@ public class ExceptionHandlingExercises {
 
     /**
      * Exercise 3 - Throwing custom exceptions
+     * Create a custom runtime exception called MissingWelcomeFileException,
+     * and update the fileHasText() method to throw this exception if no matching file is found.
      */
     @Test(expected = MissingWelcomeFileException.class)
     public void catchingCustomExceptionsWhenTheFileDoesNotExist() {
