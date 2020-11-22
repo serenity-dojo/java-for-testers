@@ -1,9 +1,6 @@
 package com.serenitydojo.exceptions;
 
-import org.assertj.core.api.Assertions;
 import org.junit.Test;
-
-import java.net.MalformedURLException;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -30,8 +27,8 @@ public class WhenWorkingWithExceptions {
 
     @Test(expected = TestEnvironmentUnavailableException.class)
     public void shouldFindThePort() {
-            StringProcessor stringProcessor = new StringProcessor();
+        StringProcessor stringProcessor = new StringProcessor();
 
-            stringProcessor.getPortOf("A:https://www.google.com");
+        stringProcessor.getPortOf("A:https://www.google.com");
     }
 }
