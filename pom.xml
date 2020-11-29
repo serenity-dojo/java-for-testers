@@ -24,6 +24,11 @@
       <version>4.13</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+      <version>3.18.0</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -67,6 +72,15 @@
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.0.0-M3</version>
+          <configuration>
+            <includes>
+              <include>**/*.java</include>
+            </includes>
+          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>
