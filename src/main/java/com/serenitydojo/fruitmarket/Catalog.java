@@ -1,11 +1,7 @@
 package com.serenitydojo.fruitmarket;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
-
-import static com.serenitydojo.fruitmarket.Fruit.*;
 
 public class Catalog {
 
@@ -15,19 +11,8 @@ public class Catalog {
         return new PriceSetter(this, fruit);
     }
 
-    public List<String> getAvailableFruit() {
-        return pricePerKilo.keySet()
-                .stream()
-                .map(Enum::name)
-                .sorted()
-                .collect(Collectors.toList());
-    }
-
     public Double getPriceOf(Fruit fruit) {
-        if (pricePerKilo.containsKey(fruit)) {
-            return pricePerKilo.get(fruit);
-        }
-        throw new FruitUnavailableException(fruit.name() + " currently unavailable");
+        return pricePerKilo.get(fruit);
     }
 
     public static class PriceSetter {
