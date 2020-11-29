@@ -20,7 +20,7 @@ public class ExceptionHandlingExercises {
      * You will need to modify the FileLoader class so that it correctly handles an IOException
      */
     @Test
-    public void workingWithDeclaredExceptions() throws IOException {
+    public void workingWithDeclaredExceptions() throws IOException ,NullPointerException{
         FileLoader fileLoader = new FileLoader();
         assertThat(fileLoader.readHelloWorld()).isEqualTo("Hello World");
     }

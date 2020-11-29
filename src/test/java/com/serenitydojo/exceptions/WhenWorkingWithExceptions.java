@@ -2,33 +2,41 @@ package com.serenitydojo.exceptions;
 
 import org.junit.Test;
 
+import java.io.IOException;
+
+import static org.assertj.core.api.Assertions.as;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class WhenWorkingWithExceptions {
 
+    WordCounter wordCounter = new WordCounter();
+
     @Test
-    public void shouldShowTheLengthOfAString() {
-        StringProcessor stringProcessor = new StringProcessor();
+    public void shouldCountTheWordsInAString() {
+        int numberOfWords = wordCounter.numberOfWordsIn("some string");
 
-        String result = stringProcessor.showLengthOf("some string");
-
-        assertThat(result).isEqualTo("some string has a length of 11");
+        assertThat(numberOfWords).isEqualTo(2);
     }
 
     @Test
-    public void shouldShowZeroForNullStrings() {
-
-        StringProcessor stringProcessor = new StringProcessor();
-
-        String result = stringProcessor.showLengthOf(null);
-
-        assertThat(result).isEqualTo("null has a length of 0");
+    public void shouldReturnZeroForANullString() {
+        assertThat(wordCounter.numberOfWordsIn(null)).isEqualTo(0);
     }
 
-    @Test(expected = TestEnvironmentUnavailableException.class)
-    public void shouldFindThePort() {
-        StringProcessor stringProcessor = new StringProcessor();
+    @Test
+    public void shouldCountWordsInAFile() throws Exception {
+        int numberOfWords = wordCounter.numberOfWordsInFile("src/main/resources/hello.txt");
+        assertThat(numberOfWords).isEqualTo(2);
+    }
 
-        stringProcessor.getPortOf("A:https://www.google.com");
+    @Test(expected = FileHasNoWordException.class)
+    public void shouldReportAnErrorIfTheFileDoesNotExist() throws Exception {
+        int numberOfWords = wordCounter.numberOfWordsInFile("file-that-does-not-exist.txt");
+        assertThat(numberOfWords).isEqualTo(0);
+    }
+
+    @Test(expected = FileHasNoWordException.class)
+    public void shouldThrowMeaningfulExceptionIfThereAreNoWordsInTheFile() throws Exception {
+        wordCounter.numberOfWordsInFile("src/main/resources/no_words.txt");
     }
 }
