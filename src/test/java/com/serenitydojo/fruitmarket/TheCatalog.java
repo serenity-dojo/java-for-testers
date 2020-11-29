@@ -20,6 +20,14 @@ public class TheCatalog {
     }
 
     @Test
+    public void shouldBeAbleToUpdateTheCurrentPriceOfAFruit() {
+        Catalog catalog = new Catalog();
+
+        catalog.setPriceOf(Apple).to(4.00);
+        assertThat(catalog.getPriceOf(Apple)).isEqualTo(4.00);
+    }
+
+    @Test
     public void shouldListTheAvailableFruitInAlphabeticalOrder() {
         assertThat(catalog.getAvailableFruit()).containsExactly("Apple", "Banana", "Orange", "Pear");
     }
