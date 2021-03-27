@@ -50,6 +50,6 @@ public class ExceptionHandlingExercises {
     @Test(expected = MissingWelcomeFileException.class)
     public void catchingCustomExceptionsWhenTheFileDoesNotExist() {
         FileLoader fileLoader = new FileLoader();
-        assertThat(fileLoader.fileHasText("does-not-exist.txt","Hello World")).isFalse();
+        //assertThat(fileLoader.fileHasText("does-not-exist.txt","Hello World")).isFalse();
     }
 }

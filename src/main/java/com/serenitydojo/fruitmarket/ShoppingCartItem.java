@@ -11,6 +11,7 @@ public class ShoppingCartItem {
         this.totalCost = totalCost;
     }
 
+
     public Fruit getFruit() {
         return fruit;
     }
@@ -19,7 +20,12 @@ public class ShoppingCartItem {
         return quantity;
     }
 
-    public Double getTotalCost() {
+    public Double getTotalCost()
+    {
+        if(this.getQuantity() > 5.00 || this.getQuantity() == 5)
+        {
+            totalCost=this.totalCost - (this.totalCost*0.1);
+        }
         return totalCost;
     }
 }
