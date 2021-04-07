@@ -18,10 +18,11 @@ public class WhenCreatingObjects {
     @Test
     public void creating_a_dog() {
 
-//        Dog dog = fido Dog("Fido","Bone", 5);
-//        Assert.assertEquals(fido.getName(), "Fido");
-//        Assert.assertEquals(fido.getFavoriteToy(), "Bone");
-//        Assert.assertEquals(fido.getAge(), 5);
+        Dog poppy = new Dog("Poppy","Teddy Bear", 7);
+
+        Assert.assertEquals(poppy.getName(), "Poppy");
+        Assert.assertEquals(poppy.getFavoriteToy(), "Teddy Bear");
+        Assert.assertEquals(poppy.getAge(), 7);
 
     }
 }
