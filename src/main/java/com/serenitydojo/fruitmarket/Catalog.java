@@ -1,7 +1,9 @@
 package com.serenitydojo.fruitmarket;
 
-import java.util.HashMap;
-import java.util.Map;
+import com.serenitydojo.exceptions.FruitUnavailableException;
+import org.assertj.core.internal.bytebuddy.implementation.bytecode.Throw;
+
+import java.util.*;
 
 public class Catalog {
 
@@ -12,7 +14,28 @@ public class Catalog {
     }
 
     public Double getPriceOf(Fruit fruit) {
-        return pricePerKilo.get(fruit);
+        if(pricePerKilo.containsKey(fruit)){
+            return pricePerKilo.get(fruit);
+        }else{
+            throw new FruitUnavailableException("The " + fruit + " are not yet available");
+        }
+    }
+
+    public List<String> sortCatalog() {
+        List<String> availableFruits = new ArrayList<>();
+        for( Fruit fruit : this.pricePerKilo.keySet()){
+            availableFruits.add(fruit.name());
+        }
+        Collections.sort(availableFruits);
+        return availableFruits;
+    }
+
+    public void displayCatalog(){
+        List<String> catalog = sortCatalog();
+        for(String item : catalog){
+            System.out.println(item);
+        }
+        System.out.println(sortCatalog());
     }
 
     public static class PriceSetter {
