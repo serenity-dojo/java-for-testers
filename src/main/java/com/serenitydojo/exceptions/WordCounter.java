@@ -1,7 +1,5 @@
 package com.serenitydojo.exceptions;
 
-import org.assertj.core.api.Assertions;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
@@ -18,7 +16,7 @@ public class WordCounter {
 
     }
 
-    public int numbersOfWordsInAFile(String fileName)  {
+    public int numbersOfWordsInAFile(String fileName){
         try {
             String fileContents = Files.readString(Paths.get(fileName));
             return numbersOfWordsIn(fileName);
