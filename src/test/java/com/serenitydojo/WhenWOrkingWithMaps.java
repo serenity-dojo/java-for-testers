@@ -1,7 +1,5 @@
 package com.serenitydojo;
-
 import org.junit.Test;
-
 import java.util.HashMap;
 import java.util.Map;
 
