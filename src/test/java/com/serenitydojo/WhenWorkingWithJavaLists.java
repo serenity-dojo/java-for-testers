@@ -3,7 +3,7 @@ import org.assertj.core.api.Assertions;
 import org.junit.Assert;
 import org.junit.Test;
 import java.util.*;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class WhenWorkingWithJavaLists {
@@ -13,7 +13,6 @@ public class WhenWorkingWithJavaLists {
         simpleList.add("this is a simple list");
         simpleList.add(123);
         assertThat(simpleList).contains("this is a simple list",123);
-git
 
     }
     @Test

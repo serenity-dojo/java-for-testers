@@ -26,5 +26,6 @@ public class WhenWorkingWithExceptions {
     public void shouldReturnAnErrorIfTheFileDoesNotExist() throws IOException {
         int numbersOfWords = wordCounter.numbersOfWordsInAFile("a-file-that-does-not-exist");
         Assertions.assertThat(numbersOfWords).isEqualTo(0);
+
     }
 }
