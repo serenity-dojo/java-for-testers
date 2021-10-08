@@ -6,8 +6,7 @@ import java.nio.file.NoSuchFileException;
 import java.nio.file.Paths;
 
 public class WordCounter {
-
-    public int numbersOfWordsIn(String value) {
+    public int numberOfWordsIn(String value){
         if(value==null){
             return 0;
         }
@@ -16,19 +15,19 @@ public class WordCounter {
 
     }
 
-    public int numbersOfWordsInAFile(String fileName){
+    public int numberOfWordsInAfile(String fileName) throws IOException {
         try {
             String fileContents = Files.readString(Paths.get(fileName));
-            return numbersOfWordsIn(fileName);
+            int wordCount = numberOfWordsIn(fileContents);
+            if(wordCount==0){
+                throw new FileHasNoWordException("no words found in a file " + fileName);
+            }
+            return wordCount;
         }
-        catch (NoSuchFileException noSuchFile){
-            return 0;
+        catch(NoSuchFileException noSuchFile){
+            throw new FileHasNoWordException("no words found in a non existing file " + fileName);
+
         }
-        catch(IOException otherException){
-            return -1;
-        }
-        finally {
-            System.out.println("file processed for " + fileName);
-        }
+
     }
 }
