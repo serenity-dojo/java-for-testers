@@ -15,7 +15,7 @@ public class WhenCreatingObjects {
         Assert.assertEquals(felix.getFavoriteFood(), "Tuna");
         Assert.assertEquals(felix.getAge(), 4);
 
-        Pet hampter = new Pet("Rusty");
+        //Pet hampter = new Hampster("Rusty");
     }
 
     @Test
@@ -46,5 +46,29 @@ public class WhenCreatingObjects {
         Assert.assertEquals(rusty.getName(), "Rusty");
         Assert.assertEquals(rusty.getFavoriteGame(), "Wheel");
         Assert.assertEquals(rusty.getAge(), 1);
+    }
+
+    @Test
+    public void cat_make_noise(){
+        Cat felix = new Cat("felix", 4);
+        System.out.println("Felix goes" + felix.makeNoise());
+    }
+
+    @Test
+    public void dog_make_noise(){
+        Dog fido = new Dog("Fido", "bone", 5);
+        System.out.println("Fido goes" + fido.makeNoise());
+    }
+
+    @Test
+    public void pets_make_noise(){
+        Pet felix = new Cat("Felix", 4);
+        Pet fido = new Dog("Fido", "bone", 5);
+        Pet rusty = new Hampster("Rusty", "Wheels", 1);
+
+        System.out.println("Felix goes" + felix.makeNoise());
+        System.out.println("Fido goes" + fido.makeNoise());
+        System.out.println("Rusty goes" + rusty.makeNoise());
+        System.out.println("Felix goes" + felix.goForWalks());
     }
 }
