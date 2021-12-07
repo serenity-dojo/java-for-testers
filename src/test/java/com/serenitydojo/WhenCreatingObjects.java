@@ -36,6 +36,9 @@ public class WhenCreatingObjects {
         System.out.println("Cats like " + usualFood());
     }
 
+    /*
+    * Test for hampster class
+     * */
     @Test
     public void creating_a_hampster()
     {
