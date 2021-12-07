@@ -12,4 +12,6 @@ public abstract class Pet {
 
     public String goForWalks() { return "walk walk walk"; }
     public abstract String makeNoise();
+
+    public abstract String play();
 }

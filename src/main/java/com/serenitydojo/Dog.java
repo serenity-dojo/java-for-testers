@@ -21,4 +21,8 @@ public class Dog extends Pet {
     public String makeNoise() {
         return "Woof";
     }
+
+    @Override public String play() {
+        return "plays with bone";
+    }
 }
