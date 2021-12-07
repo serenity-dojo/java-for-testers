@@ -35,4 +35,13 @@ public class WhenCreatingObjects {
 
         System.out.println("Cats like " + usualFood());
     }
+
+    @Test
+    public void creating_a_hampster()
+    {
+        Hampster rusty = new Hampster("Rusty","Wheel", 1);
+        Assert.assertEquals(rusty.getName(), "Rusty");
+        Assert.assertEquals(rusty.getFavoriteGame(), "Wheel");
+        Assert.assertEquals(rusty.getAge(), 1);
+    }
 }
