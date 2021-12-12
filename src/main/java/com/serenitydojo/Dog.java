@@ -17,4 +17,8 @@ public class Dog extends Pet {
     public int getAge() {
         return age;
     }
+
+    public String makeNoise() {
+        return "Woof";
+    }
 }
