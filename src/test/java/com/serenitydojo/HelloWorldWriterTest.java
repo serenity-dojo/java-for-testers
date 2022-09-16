@@ -18,6 +18,6 @@ public class HelloWorldWriterTest {
         double weight = 15.5;
         float height = 3.5F;
 
-        System.out.println("age = " + age);
+        System.out.println("age = " + ageThisYear);
     }
 }
