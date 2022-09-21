@@ -29,4 +29,22 @@ public class WhenCreatingObjects {
         Assert.assertEquals(rosco.getToy(), "stick");
         Assert.assertEquals(rosco.getAge(), 5);
     }
+
+    @Test
+    public void cat_make_noise(){
+        Cat spot = new Cat( "Spot", "Tuna", 3);
+        Cat felix = new Cat("Felix", "Tuna", 4);
+
+        System.out.println("Usual Food " + Cat.usualFood());
+        System.out.println("Felix´s favorite food = " + felix.getFood());
+        //Cat.CAT_NOISE = "Loud meow";
+
+        /*spot.makeNoise();
+        felix.makeNoise();
+        spot.groom();
+        spot.feed("Salmon");
+        felix.feed("Tuna");*/
+
+    }
+
 }
