@@ -1,46 +1,45 @@
 package com.serenitydojo;
 
-public class Cat {
-    private String name;
+public class Cat extends Pet{
+
     private String food;
-    private int age;
+
+    private String toy;
     public static String CAT_NOISE = "Meow";
+
+    public static String PLAY = "plays with string";
+
+    public Cat(String name, String toy, int age) {
+        super(name, age);
+        this.toy = toy;
+    }
 
     public static String usualFood(){
         return "Tuna";
     }
 
-    public Cat(String name, int age){
-        this.name = name;
-        this.age = age;
-        this.food = usualFood();
-    }
 
-    public Cat(String name, String food, int age) {
-        this.name = name;
+/*    public Cat(String name, String food, int age) {
+        super(name, age);
         this.food = food;
-        this.age = age;
-
-    }
-
-    public String getName() {
-        return name;
-    }
+    }*/
 
     public String getFood() {
         return food;
     }
 
-    public int getAge() {
-        return age;
+    @Override
+    public String makeNoise() {
+        return CAT_NOISE;
     }
 
-    public void makeNoise() {
-        System.out.println(CAT_NOISE);
+    @Override
+    public String play() {
+        return PLAY;
     }
 
     public void feed(String food) {
-        System.out.println(name + " eats some " + food);
+        System.out.println(getName() + " eats some " + food);
     }
 
     public void groom() {
@@ -49,10 +48,10 @@ public class Cat {
     }
 
     private void cleanFur() {
-        System.out.println(name + " cleans his fur");
+        System.out.println(getName() + " cleans his fur");
     }
 
     private void lickPaws() {
-        System.out.println(name + " lick his paws");
+        System.out.println(getName() + " lick his paws");
     }
 }
