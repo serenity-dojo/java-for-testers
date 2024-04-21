@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="java8_SDET_TestNg_Tests">
+	<test name="SDET_Run_TestNg_TCs">
+		<classes>
+			<class name="com.serenitydojo.strings.WhenManipulatingWithStringsTests" />
+			<class name="com.serenitydojo.addresses.WhenProcessingAddressesFromAnExternalSourceTests" />
+			<class name="com.serenitydojo.banking.WhenCalculatingMonthlyInterestTests" />
+			<class name="com.serenitydojo.calculator.WhenDoingMathsTests" />
+			<class name="com.serenitydojo.cart.WhenAddingStuffToACartTests" />
+			<class name="com.serenitydojo.checks.DogClassTests" />
+			<class name="com.serenitydojo.checks.EnumsTests" />
+			<class name="com.serenitydojo.checks.HamsterClassTests" />
+			<class name="com.serenitydojo.checks.PetClassTests" />
+			<class name="com.serenitydojo.classAndObjects.WhenCreatingCatAndDogObjects" />
+			<class name="com.serenitydojo.classAndObjects.WhenFeedingTheAnimalsTests" />
+			<class name="com.serenitydojo.classAndObjects.WhenWorkingWithListsTests" />
+			<class name="com.serenitydojo.classAndObjects.WhenWorkingWithSetsTests" />
+			<class name="com.serenitydojo.classAndObjects.WhenWritingReadableAssertionsTests" />
+			<class name="com.serenitydojo.clock.WhenTellingTheTimeTests" />
+			<class name="com.serenitydojo.dataTypes.HelloWorldWritterTests" />
+			<class name="com.serenitydojo.dataTypes.WhenWorkingWithFloatingPointNumbersTests" />
+			<class name="com.serenitydojo.dataTypes.WhenWorkingWithStringsTests" />
+			<class name="com.serenitydojo.dataTypes.WhenWorkingWithWholeNumbersTests" />
+			<class name="com.serenitydojo.dateapi.CreatingLocalDatesTests" />
+			<class name="com.serenitydojo.dateapi.CreatingRelativeDatesTests" />
+			<class name="com.serenitydojo.dateapi.FormattingDatesTests" />
+			<class name="com.serenitydojo.domain.flights.WhenBookingFlightsTests" />
+			<class name="com.serenitydojo.enums.WhenManipulatingEnumsTests" />
+			<class name="com.serenitydojo.exceptions.WhenPlayingWithFileExceptionsTests" />
+			<class name="com.serenitydojo.exceptions.WhenWorkingWithClientDataExceptionsTests" />
+			<class name="com.serenitydojo.exceptions.WhenWorkingWithExceptionsTests" />
+			<class name="com.serenitydojo.fruitmarket.TheCatalogTests" />
+			<class name="com.serenitydojo.fruitmarket.TheShoppingCartTests" />
+			<class name="com.serenitydojo.lambdas.WhenUsingLambdasTests" />
+			<class name="com.serenitydojo.lists.WhenFilteringWithListsTests" />
+			<class name="com.serenitydojo.lists.WhenWorkingWithJavaListsTests" />
+			<class name="com.serenitydojo.maps.WhenManipulatingWithJavaMapsTests" />
+			<class name="com.serenitydojo.maps.WhenPlayingWithVarMapsTests" />
+			<class name="com.serenitydojo.maps.WhenWorkingWithMapsTests" />
+			<class name="com.serenitydojo.shoppingcart.WhenCalculatingTotalPriceTests" />
+			<class name="com.serenitydojo.streams.exercises.moneymanager.solutions.Module1FindTheSumOfAllTransactionsTests" />
+			<class name="com.serenitydojo.streams.exercises.moneymanager.solutions.Module1FindTheTotalNumberOfTransactionsTests" />
+			<class name="com.serenitydojo.streams.exercises.moneymanager.solutions.Module1FindTheVolumeOfTransactionsTests" />
+			<class name="com.serenitydojo.streams.exercises.moneymanager.solutions.Module2FindTheLargestDepositTests" />
+			<class name="com.serenitydojo.streams.exercises.moneymanager.solutions.Module2FindTheLargestTransactionTests" />
+			<class name="com.serenitydojo.streams.exercises.moneymanager.solutions.Module2FindTheLargestWithdrawalTests" />
+			<class name="com.serenitydojo.streams.exercises.moneymanager.solutions.Module2FindTheSmallestDepositTests" />
+			<class name="com.serenitydojo.streams.exercises.moneymanager.solutions.Module2FindTheSmallestWithdrawalTests" />
+			<class name="com.serenitydojo.streams.exercises.moneymanager.solutions.Module3FindATransactionThatExceedsACertainThresholdForAGivenCounterpartyTests" />
+			<class name="com.serenitydojo.streams.exercises.moneymanager.solutions.Module3FindATransactionThatExceedsACertainThresholdTests" />
+			<class name="com.serenitydojo.streams.exercises.moneymanager.solutions.Module4FindAllTheCounterpartiesTests" />
+			<class name="com.serenitydojo.streams.exercises.moneymanager.solutions.Module4FindTotalTransactionsForACounterpartyTests" />
+			<class name="com.serenitydojo.streams.exercises.moneymanager.solutions.Module4FindTransactionsForACounterpartyTests" />
+			<class name="com.serenitydojo.streams.exercises.moneymanager.solutions.Module5FindInvalidTransactionsWithEmptyCounterpartiesTests" />
+			<class name="com.serenitydojo.streams.exercises.moneymanager.solutions.Module5FindInvalidTransactionsWithNegativeValuesTests" />
+			<class name="com.serenitydojo.streams.exercises.moneymanager.solutions.Module5FindInvalidTransactionsWithZeroValuesTests" />
+		</classes>
+	</test> 
+</suite>
