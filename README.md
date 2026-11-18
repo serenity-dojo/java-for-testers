@@ -28,7 +28,7 @@ The exercises are provided on two branches, which have exactly the same layout:
 2. Clone the repository and switch to the `starter` branch:
 
    ```
-   git clone <the URL of this repository>
+   git clone https://github.com/serenity-dojo/java-for-testers.git
    cd java-for-testers
    git checkout starter
    ```
